@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:background="#f1f0f0" >
+    
+    <RelativeLayout 
+        android:id="@+id/header"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" 
+        android:background="#00b89c"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_alignParentTop="true">
+    
+    	
+    	
+    	<TextView 
+    	    android:id="@+id/set_alarm"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_centerVertical="true"
+    	    android:textStyle="normal"
+    	    android:text="Set Alarm"
+    	    android:textColor="#ffffff"
+    	    android:textSize="20sp"/>
+    	
+    </RelativeLayout>
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+    
+    <ProgressBar
+        android:id="@+id/progressBarToday"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_below="@id/timePicker"
+        android:indeterminate="false"
+        android:max="60"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressbar" />
+    
+    <RelativeLayout 
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBarToday"
+        android:background="#00b89c">
+    	
+        <Button
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/done" />
+        
+        <Button
+            android:id="@+id/discard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/discard" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

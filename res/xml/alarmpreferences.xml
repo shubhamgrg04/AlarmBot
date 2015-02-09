@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Set Alarm" >
+    
+    <CheckBoxPreference
+        android:key="enabled"
+        android:title="Turn on"
+        android:summary="Turns alarm on"
+        android:persistent="true"/>
+    <Preference 
+        android:title="Time"
+        android:key="time"
+        android:persistent="true" />
+    <CheckBoxPreference
+        android:key="auto_call"
+        android:title="Automatic Calling" 
+        android:persistent="true" />
+    <CheckBoxPreference
+        android:key="vibrate"
+        android:title="Vibrate"
+        android:persistent="true"/>
+    <EditTextPreference 
+        android:key="message"
+        android:title="Message"
+        android:persistent="true"/>
+    <RingtonePreference
+        android:key="alert"
+        android:title="Alarm Sound"
+        android:persistent="true"
+        android:ringtoneType="alarm" />
+    
+
+</PreferenceScreen>

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.apkbot.alarmbot.Main"
+    tools:ignore="MergeRootFrame" >
+    
+    <RelativeLayout 
+        android:id="@+id/header"
+        android:layout_height="40dp"
+        android:layout_width="match_parent" 
+        android:background="#00b89c"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+    
+    	
+    	
+    	<TextView 
+    	    android:id="@+id/set_alarm"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_centerVertical="true"
+    	    android:textStyle="normal"
+    	    android:text="Set Alarm"
+    	    android:textColor="#ffffff"
+    	    android:textSize="20sp"/>
+
+    	<Button
+    	    android:id="@+id/addalarm"
+    	    style="?android:attr/buttonStyleSmall"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_alignParentTop="true"
+    	    android:background="@drawable/add_new"
+    	    android:onClick="addalarm" />
+
+    	<Button
+    	    android:id="@+id/settings"
+    	    style="?android:attr/buttonStyleSmall"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_alignParentTop="true"
+    	    android:background="@drawable/setting"
+    	    android:onClick="setting" />
+    	
+    </RelativeLayout>
+        	
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp" >
+
+    </ListView>
+    
+
+</RelativeLayout>
+

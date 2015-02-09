@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Settings" >
+    
+    <CheckBoxPreference
+        android:key="alarm_on"
+        android:title="Turn on"
+        android:summary="Turns on the alarm" />
+        
+
+</PreferenceScreen>

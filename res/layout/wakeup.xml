@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e1f1f" >
+
+    
+     <TextView
+        android:id="@+id/now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/digitalClock"
+        android:layout_centerHorizontal="true"
+        android:text="Now:"
+        android:textColor="#00b89c" />
+     
+     <DigitalClock
+        android:id="@+id/digitalClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/alarm_set_for"
+        android:layout_centerHorizontal="true"
+        android:text="DigitalClock"
+        android:textAllCaps="false"
+        android:textColor="#00b89c"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+     
+     <TextView
+        android:id="@+id/alarm_set_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/alarm_time"
+        android:layout_centerHorizontal="true"
+        android:text="Alarm set for:"
+        android:layout_marginTop="12dp"
+        android:textColor="#00b89c" />
+     
+    <TextView
+        android:id="@+id/alarm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="04:45"
+        android:textColor="#00b89c"
+        android:textSize="40sp" />
+    
+    <TextView
+        android:id="@+id/ampm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/alarm_time"
+        android:layout_alignBottom="@id/alarm_time"
+        android:layout_marginLeft="2dp"
+        android:text="am"
+        android:textStyle="bold"
+        android:textColor="#00b89c" />
+    
+    <Button
+        android:id="@+id/stop_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ring"
+        android:onClick="stop"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarm_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:onClick="stop"
+        android:text="Dismiss"
+        android:textColor="#eae5e0"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/now"
+        android:layout_marginBottom="55dp"
+        android:text="WakeUp!"
+        android:textColor="#00b89c"
+        android:textSize="45sp" />
+
+</RelativeLayout>

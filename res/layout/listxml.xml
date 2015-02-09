@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f1f0f0"
+    android:descendantFocusability="blocksDescendants">
+    
+        <RelativeLayout 
+            android:id="@+id/alarm_time"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="5dp">
+				    <TextView
+				        android:id="@+id/hour"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_centerVertical="true"
+				        android:textColor="#605e5e"
+				        android:textSize="30sp"
+				        android:textStyle="bold" />
+				    
+				    <TextView
+				        android:id="@+id/colon"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_toRightOf="@id/hour"
+				        android:layout_centerVertical="true"
+				        android:textColor="#605e5e"
+				        android:textSize="30sp"
+				        android:text=":"/>
+				    
+				    <TextView
+				        android:id="@+id/minute"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_centerVertical="true"
+				        android:layout_toRightOf="@id/colon"
+				        android:textColor="#605e5e"
+				        android:textSize="30sp" />
+				    
+				    <TextView 
+				        android:id="@+id/am_pm"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_toRightOf="@id/minute"
+				        android:layout_marginLeft="2sp"
+				        android:textColor="#7b7979"
+				        android:layout_alignBottom="@id/hour"
+				        android:textSize="12sp"
+				        android:textStyle="bold" />
+		    </RelativeLayout>
+		    
+          <TextView 
+				        android:id="@+id/active_inactive"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentLeft="true"
+				        android:layout_alignParentBottom="true"
+				        android:layout_marginLeft="8sp"
+				        android:text="Active"
+				        android:textColor="#8e999a"
+				        android:textSize="10sp" 
+				        android:textStyle="bold"/>
+		    
+        <RelativeLayout
+            android:id="@+id/details"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/alarm_time" >
+        	
+        	<TextView 
+        	    android:id="@+id/automaticEnabled"
+        	    android:layout_height="wrap_content"
+        	    android:layout_width="wrap_content"
+        	    android:layout_alignParentTop="true"
+        	    android:text="Automatic Calling : ON"
+        	    android:textColor="#605e5e"
+        	    android:textSize="12sp"/>
+        	
+        	<TextView 
+        	    android:id="@+id/repeat"
+        	    android:layout_height="wrap_content"
+        	    android:layout_width="wrap_content"
+        	    android:layout_below="@id/automaticEnabled"
+        	    android:text="Mon Tue Thu Sat Sun"
+        	    android:textColor="#00b89c"
+        	    android:textSize="12sp"
+        	    android:textStyle="bold"/>
+        	
+        </RelativeLayout>
+    
+
+	<CheckBox
+	    android:id="@+id/checkbox"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginRight="15dp"
+	    android:clickable="true"
+	    android:focusable="true"/>
+
+</RelativeLayout>
